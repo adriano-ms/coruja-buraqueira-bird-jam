@@ -5,7 +5,7 @@ extends Node2D
 @onready var player : CharacterBody2D = %Player
 @onready var spawn_point : Marker2D = %SpawnPoint
 
-var time_limit : float = 5.0
+var time_limit : float = 20.0
 
 var current_level : int = 1
 
@@ -46,7 +46,7 @@ func _process(delta):
 			if(current_level < 4):
 				#player.position = spawn_point.position
 				_next_level()
-				time_limit = 5.0
+				time_limit = 20.0
 				pause = false
 	
 func _start_timer():

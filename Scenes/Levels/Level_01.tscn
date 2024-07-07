@@ -1,5 +1,7 @@
-[gd_scene load_steps=28 format=3 uid="uid://cfgo0cetkxpa0"]
+[gd_scene load_steps=30 format=3 uid="uid://cfgo0cetkxpa0"]
 
+[ext_resource type="Script" path="res://Scripts/Level_01.gd" id="1_fc85p"]
+[ext_resource type="PackedScene" uid="uid://c7jnuhc03mxxe" path="res://Scenes/Levels/pause_menu.tscn" id="1_h3hyw"]
 [ext_resource type="PackedScene" uid="uid://cyti38f0lagf2" path="res://Scenes/Prefabs/LevelFinishDoor.tscn" id="1_oqkjg"]
 [ext_resource type="PackedScene" uid="uid://w7m6tehvvy3g" path="res://Scenes/Prefabs/player.tscn" id="2_pay8t"]
 [ext_resource type="Script" path="res://Scripts/GameManager.gd" id="4_vgfkr"]
@@ -15,9 +17,9 @@
 [ext_resource type="Texture2D" uid="uid://bwxa0iugu0mic" path="res://Assets/Textures/beetle-icone.PNG" id="13_ayoah"]
 [ext_resource type="Texture2D" uid="uid://ycw1w87rnltc" path="res://Assets/Textures/graveto-icone.png" id="14_s0rc4"]
 [ext_resource type="PackedScene" uid="uid://d2j58wmn3vrkd" path="res://Scenes/Prefabs/Beetle.tscn" id="16_leusr"]
-[ext_resource type="Theme" uid="uid://bty8qdyqbtnf" path="res://Assets/Themes/new_theme.tres" id="16_tdov4"]
 [ext_resource type="PackedScene" uid="uid://bduo31tpjl4sf" path="res://Scenes/Prefabs/Mice.tscn" id="17_3gtg4"]
 [ext_resource type="PackedScene" uid="uid://dakonm6vj4ipy" path="res://Scenes/Prefabs/Manure.tscn" id="17_kco6l"]
+[ext_resource type="Theme" uid="uid://bty8qdyqbtnf" path="res://Assets/Themes/new_theme.tres" id="17_xm3l3"]
 [ext_resource type="PackedScene" uid="uid://bbggf3u306635" path="res://Scenes/Prefabs/Stick.tscn" id="18_kmd18"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gs0qk"]
@@ -1423,6 +1425,7 @@ sources/4 = SubResource("TileSetAtlasSource_osh23")
 sources/5 = SubResource("TileSetAtlasSource_b5m40")
 
 [node name="Level_01" type="Node2D"]
+script = ExtResource("1_fc85p")
 
 [node name="LevelFinishDoor" parent="." instance=ExtResource("1_oqkjg")]
 z_index = 1
@@ -1434,6 +1437,7 @@ z_index = 1
 position = Vector2(264, 342)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
+unique_name_in_owner = true
 position = Vector2(16, 36)
 limit_left = -8190
 limit_right = 9200
@@ -1511,6 +1515,12 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("6_66mfc")
 
+[node name="PauseMenu" parent="UserInterface/GameUI" instance=ExtResource("1_h3hyw")]
+unique_name_in_owner = true
+visible = false
+show_behind_parent = true
+layout_mode = 1
+
 [node name="Food" type="Control" parent="UserInterface/GameUI"]
 unique_name_in_owner = true
 anchors_preset = 0
@@ -1521,10 +1531,10 @@ offset_bottom = 40.0
 [node name="FoodTexture" type="TextureRect" parent="UserInterface/GameUI/Food"]
 unique_name_in_owner = true
 layout_mode = 0
-offset_left = 34.0
-offset_top = 41.0
-offset_right = 100.0
-offset_bottom = 104.0
+offset_left = 37.0
+offset_top = 48.0
+offset_right = 101.0
+offset_bottom = 112.0
 texture = ExtResource("13_ayoah")
 stretch_mode = 4
 
@@ -1551,10 +1561,10 @@ offset_bottom = 40.0
 [node name="StickTexture" type="TextureRect" parent="UserInterface/GameUI/Stick"]
 unique_name_in_owner = true
 layout_mode = 0
-offset_left = 23.0
-offset_top = 6.0
-offset_right = 123.0
-offset_bottom = 106.0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 116.0
+offset_bottom = 116.0
 texture = ExtResource("14_s0rc4")
 stretch_mode = 4
 
@@ -1585,8 +1595,7 @@ unique_name_in_owner = true
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
-theme = ExtResource("16_tdov4")
-text = "Timer"
+theme = ExtResource("17_xm3l3")
 
 [node name="Besouro" type="Node2D" parent="."]
 
