@@ -1592,31 +1592,40 @@ position = Vector2(8622, 170)
 [node name="Mice" parent="Rato" instance=ExtResource("17_3gtg4")]
 position = Vector2(-8087, -342)
 
-[node name="Mice2" parent="Rato" instance=ExtResource("17_3gtg4")]
-position = Vector2(-6898, 113)
-
 [node name="Mice3" parent="Rato" instance=ExtResource("17_3gtg4")]
 position = Vector2(-5207, 529)
 
 [node name="Mice4" parent="Rato" instance=ExtResource("17_3gtg4")]
 position = Vector2(-4995, 540)
 
-[node name="Mice5" parent="Rato" instance=ExtResource("17_3gtg4")]
-position = Vector2(-1942, 294)
-
 [node name="Mice6" parent="Rato" instance=ExtResource("17_3gtg4")]
 position = Vector2(2035, 45)
-
-[node name="Mice7" parent="Rato" instance=ExtResource("17_3gtg4")]
-position = Vector2(8729, 165)
 
 [node name="Mice8" parent="Rato" instance=ExtResource("17_3gtg4")]
 position = Vector2(5654, -341)
 
-[node name="Mice9" parent="Rato" instance=ExtResource("17_3gtg4")]
-position = Vector2(5965, -162)
-
 [node name="Manure" type="Node2D" parent="."]
 
 [node name="Manure" parent="Manure" instance=ExtResource("18_7vir7")]
-position = Vector2(561, 414)
+position = Vector2(-5111, 575)
+
+[node name="Manure2" parent="Manure" instance=ExtResource("18_7vir7")]
+position = Vector2(-2449, -13)
+
+[node name="Manure3" parent="Manure" instance=ExtResource("18_7vir7")]
+position = Vector2(5314, -333)
+
+[node name="Manure4" parent="Manure" instance=ExtResource("18_7vir7")]
+position = Vector2(3768, 41)
+
+[node name="Manure5" parent="Manure" instance=ExtResource("18_7vir7")]
+position = Vector2(-1874, 280)
+
+[node name="Manure6" parent="Manure" instance=ExtResource("18_7vir7")]
+position = Vector2(8138, -28)
+
+[node name="Manure7" parent="Manure" instance=ExtResource("18_7vir7")]
+position = Vector2(1356, 230)
+
+[node name="Manure8" parent="Manure" instance=ExtResource("18_7vir7")]
+position = Vector2(-6870, 103)
