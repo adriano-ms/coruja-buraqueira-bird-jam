@@ -1,36 +1,9 @@
 extends Control
 
-@onready var pause_menu = %PauseMenu
-@onready var main = $"../../"
-
-var paused = false
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	if Input.is_action_just_pressed("pause"):
-		pauseMenu()
-		
-func pauseMenu():
-	if paused:
-		pause_menu.hide()
-		Engine.time_scale = 1
-	else:
-		pause_menu.show()
-		Engine.time_scale = 0
-		
-	paused = !paused
+@onready var main = $"../../.."
 
 func _on_resume_pressed():
 	main.pauseMenu()
 	
-	
 func _on_quit_pressed():
 	get_tree().quit()
-
-
-
