@@ -1,0 +1,71 @@
+[gd_scene load_steps=10 format=3 uid="uid://bduo31tpjl4sf"]
+
+[ext_resource type="Script" path="res://Scripts/Mice.gd" id="1_utrdw"]
+[ext_resource type="Texture2D" uid="uid://bhwk8yui7tk5d" path="res://Assets/Spritesheet/mice.png" id="2_n0stf"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t01vh"]
+atlas = ExtResource("2_n0stf")
+region = Rect2(0, 0, 32, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ljciw"]
+atlas = ExtResource("2_n0stf")
+region = Rect2(32, 0, 32, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pwqlc"]
+atlas = ExtResource("2_n0stf")
+region = Rect2(64, 0, 32, 14)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_l2jx0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t01vh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ljciw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pwqlc")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ocurq"]
+size = Vector2(22, 0)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_l34yu"]
+radius = 92.635
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uybij"]
+size = Vector2(22, 13)
+
+[node name="Mice" type="CharacterBody2D"]
+texture_filter = 1
+texture_repeat = 1
+scale = Vector2(2, 2)
+script = ExtResource("1_utrdw")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_l2jx0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 7)
+shape = SubResource("RectangleShape2D_ocurq")
+one_way_collision_margin = 0.0
+
+[node name="DetectionArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea"]
+shape = SubResource("CircleShape2D_l34yu")
+debug_color = Color(0.687515, 0.499535, 0, 0.42)
+
+[node name="CollectArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollectArea"]
+position = Vector2(1, 0.5)
+shape = SubResource("RectangleShape2D_uybij")
+
+[connection signal="body_entered" from="DetectionArea" to="." method="_on_detection_area_body_entered"]
+[connection signal="body_entered" from="CollectArea" to="." method="_on_collect_area_body_entered"]
