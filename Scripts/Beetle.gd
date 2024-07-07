@@ -27,7 +27,7 @@ func fall():
 
 func default_movement():
 	if(position.x > initial_position.x + back_range):
-			backing = true
+		backing = true
 	if(position.x < initial_position.x - back_range):
 		backing = false
 	if(backing):
@@ -41,7 +41,7 @@ func update():
 	move_and_slide()
 	beetle_sprite.flip_h = !backing
 	if(is_on_wall() and is_on_floor()):
-		velocity.y = -500
+		backing = true
 
 func _on_collect_area_body_entered(body):
 	if(body.is_in_group("Player")):
