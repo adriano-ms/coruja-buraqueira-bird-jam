@@ -1,6 +1,8 @@
 extends Control
 
 @onready var pause_menu = %PauseMenu
+@onready var main = $"../../"
+
 var paused = false
 
 # Called when the node enters the scene tree for the first time.
@@ -22,3 +24,13 @@ func pauseMenu():
 		Engine.time_scale = 0
 		
 	paused = !paused
+
+func _on_resume_pressed():
+	main.pauseMenu()
+	
+	
+func _on_quit_pressed():
+	get_tree().quit()
+
+
+
