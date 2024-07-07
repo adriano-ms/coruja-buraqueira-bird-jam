@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://dakonm6vj4ipy"]
+[gd_scene load_steps=9 format=3 uid="uid://dakonm6vj4ipy"]
 
 [ext_resource type="Script" path="res://Scripts/Manure.gd" id="1_h3ag7"]
 [ext_resource type="Texture2D" uid="uid://621as0fwjhum" path="res://Assets/Textures/star_07.png" id="2_rsms8"]
 [ext_resource type="Texture2D" uid="uid://degmg2jyythvw" path="res://Assets/Textures/coco.png" id="4_qkx33"]
+[ext_resource type="AudioStream" uid="uid://5tf5rj7mrvy" path="res://Assets/Sound/item.wav" id="4_wo21i"]
 
 [sub_resource type="Curve" id="Curve_yh7uo"]
 _data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.494709, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
@@ -56,5 +57,8 @@ position = Vector2(12, -3)
 scale = Vector2(3.601, 3.837)
 sprite_frames = SubResource("SpriteFrames_y303o")
 animation = &"Manure"
+
+[node name="Item" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_wo21i")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,7 +1,8 @@
-[gd_scene load_steps=11 format=3 uid="uid://d2j58wmn3vrkd"]
+[gd_scene load_steps=12 format=3 uid="uid://d2j58wmn3vrkd"]
 
 [ext_resource type="Script" path="res://Scripts/Beetle.gd" id="1_xli3d"]
 [ext_resource type="Texture2D" uid="uid://d0807axdwdhmt" path="res://Assets/Entities/beetle.PNG" id="2_y5x03"]
+[ext_resource type="AudioStream" uid="uid://5tf5rj7mrvy" path="res://Assets/Sound/item.wav" id="3_aiqtp"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gdrai"]
 atlas = ExtResource("2_y5x03")
@@ -70,5 +71,8 @@ one_way_collision_margin = 0.0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CollectArea"]
 position = Vector2(4.5, 0)
 shape = SubResource("RectangleShape2D_uybij")
+
+[node name="Item" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_aiqtp")
 
 [connection signal="body_entered" from="CollectArea" to="." method="_on_collect_area_body_entered"]

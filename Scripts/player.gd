@@ -59,6 +59,7 @@ func handle_jumping():
 # Player jump
 func jump():
 	#jump_tween()
+	$Pulo.play()
 	AudioManager.jump_sfx.play()
 	velocity.y = -jump_force
 

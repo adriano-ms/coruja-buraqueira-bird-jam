@@ -46,6 +46,7 @@ func update():
 func _on_collect_area_body_entered(body):
 	if(body.is_in_group("Player")):
 		GameManager.add_food(points)
+		$Item.play()
 		var tween = create_tween()
 		tween.tween_property(self, "scale", Vector2.ZERO, 0.1)
 		await tween.finished

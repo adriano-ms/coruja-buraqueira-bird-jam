@@ -1,7 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://bduo31tpjl4sf"]
+[gd_scene load_steps=11 format=3 uid="uid://bduo31tpjl4sf"]
 
 [ext_resource type="Script" path="res://Scripts/Mice.gd" id="1_utrdw"]
 [ext_resource type="Texture2D" uid="uid://k0vq75bvg4ad" path="res://Assets/Entities/mice.png" id="2_d50us"]
+[ext_resource type="AudioStream" uid="uid://5tf5rj7mrvy" path="res://Assets/Sound/item.wav" id="3_4kak7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_70gvx"]
 atlas = ExtResource("2_d50us")
@@ -66,6 +67,9 @@ debug_color = Color(0.687515, 0.499535, 0, 0.42)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CollectArea"]
 position = Vector2(1, 0.5)
 shape = SubResource("RectangleShape2D_uybij")
+
+[node name="Item" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_4kak7")
 
 [connection signal="body_entered" from="DetectionArea" to="." method="_on_detection_area_body_entered"]
 [connection signal="body_entered" from="CollectArea" to="." method="_on_collect_area_body_entered"]
