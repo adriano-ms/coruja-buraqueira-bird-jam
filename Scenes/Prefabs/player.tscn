@@ -89,8 +89,8 @@ texture_filter = 1
 scale = Vector2(1.995, 1.995)
 script = ExtResource("1_qt7d6")
 move_speed = 300.0
-jump_force = 500.0
-gravity = 15.0
+jump_force = 350.0
+gravity = 20.0
 max_jump_count = 5
 double_jump = true
 

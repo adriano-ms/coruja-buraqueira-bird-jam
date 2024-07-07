@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dgk00yhb2jh12"]
+[gd_scene load_steps=8 format=3 uid="uid://bbggf3u306635"]
 
 [ext_resource type="Script" path="res://Scripts/Stick.gd" id="1_beb3g"]
 [ext_resource type="Texture2D" uid="uid://621as0fwjhum" path="res://Assets/Textures/star_07.png" id="2_8amhx"]

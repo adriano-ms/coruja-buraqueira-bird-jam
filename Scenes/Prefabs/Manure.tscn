@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bfmh3fm2de78o"]
+[gd_scene load_steps=8 format=3 uid="uid://dakonm6vj4ipy"]
 
 [ext_resource type="Script" path="res://Scripts/Manure.gd" id="1_h3ag7"]
 [ext_resource type="Texture2D" uid="uid://621as0fwjhum" path="res://Assets/Textures/star_07.png" id="2_rsms8"]
