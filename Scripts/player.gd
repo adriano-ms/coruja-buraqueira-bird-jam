@@ -27,6 +27,9 @@ func _process(_delta):
 	player_animations()
 	flip_player()
 	
+func _ready():
+	GameManager._start_timer()
+	
 # --------- CUSTOM FUNCTIONS ---------- #
 
 # <-- Player Movement Code -->
