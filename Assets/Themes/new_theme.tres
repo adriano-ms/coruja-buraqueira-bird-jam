@@ -1,10 +1,18 @@
-[gd_resource type="Theme" load_steps=3 format=3 uid="uid://bty8qdyqbtnf"]
+[gd_resource type="Theme" load_steps=5 format=3 uid="uid://bty8qdyqbtnf"]
 
 [ext_resource type="FontFile" uid="uid://qgc4vi5osk7v" path="res://Assets/Fonts/Star Choco.ttf" id="1_l0smr"]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5s4mh"]
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bakro"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_784wa"]
 
 [resource]
 default_font = ExtResource("1_l0smr")
 default_font_size = 30
+Button/colors/font_color = Color(0.8, 0.454902, 0.219608, 1)
+Button/font_sizes/font_size = 32
+Button/styles/focus = SubResource("StyleBoxEmpty_5s4mh")
 Button/styles/normal = SubResource("StyleBoxEmpty_bakro")
+Button/styles/pressed = SubResource("StyleBoxEmpty_784wa")
