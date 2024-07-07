@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://7hy57pvfh6hk"]
+[gd_scene load_steps=4 format=3 uid="uid://7hy57pvfh6hk"]
 
 [ext_resource type="Script" path="res://Scripts/Menu.gd" id="1_nq2rd"]
+[ext_resource type="Theme" uid="uid://bty8qdyqbtnf" path="res://Assets/Themes/new_theme.tres" id="1_u3ywj"]
 [ext_resource type="PackedScene" uid="uid://cjanwm3sy2x37" path="res://Scenes/Levels/Level_01.tscn" id="2_a2u22"]
 
 [node name="Menu" type="Control"]
@@ -10,33 +11,31 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme = ExtResource("1_u3ywj")
 script = ExtResource("1_nq2rd")
 next_scene = ExtResource("2_a2u22")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
+texture_filter = 1
 layout_mode = 1
-anchors_preset = 8
+anchors_preset = 7
 anchor_left = 0.5
-anchor_top = 0.5
+anchor_top = 1.0
 anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -48.0
-offset_top = -50.5
-offset_right = 48.0
-offset_bottom = 50.5
+anchor_bottom = 1.0
+offset_left = -124.0
+offset_top = -115.0
+offset_right = 124.0
+offset_bottom = -55.0
 grow_horizontal = 2
-grow_vertical = 2
+grow_vertical = 0
 
 [node name="StartButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 focus_neighbor_top = NodePath("../Quit")
 text = "Start Game"
-
-[node name="Options" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-text = "Options"
 
 [node name="Quit" type="Button" parent="VBoxContainer"]
 layout_mode = 2
