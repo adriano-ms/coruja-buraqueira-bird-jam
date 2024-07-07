@@ -8,6 +8,7 @@ extends CharacterBody2D
 @export var run_speed = 300
 @export var keep_running_time = 3
 @export var gravity : float = 30
+@export var points : int = 2
 
 var backing : bool
 var initial_position = Vector2.ZERO
@@ -69,7 +70,7 @@ func update():
 
 func _on_collect_area_body_entered(body):
 	if(body.is_in_group("Player")):
-		GameManager.add_score()
+		GameManager.add_food(points)
 		var tween = create_tween()
 		tween.tween_property(self, "scale", Vector2.ZERO, 0.1)
 		await tween.finished
