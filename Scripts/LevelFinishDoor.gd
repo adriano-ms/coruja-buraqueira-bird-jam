@@ -7,5 +7,8 @@ extends Area2D
 # Load next level scene when player collide with level finish door.
 func _on_body_entered(body):
 	if body.is_in_group("Player"):
-		AudioManager.level_complete_sfx.play()
-		player.position = spawn_point.position
+		GameManager.is_player_in_house = true
+
+func _on_body_exited(body):
+	if body.is_in_group("Player"):
+		GameManager.is_player_in_house = false
