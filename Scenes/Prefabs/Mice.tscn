@@ -1,31 +1,31 @@
 [gd_scene load_steps=10 format=3 uid="uid://bduo31tpjl4sf"]
 
 [ext_resource type="Script" path="res://Scripts/Mice.gd" id="1_utrdw"]
-[ext_resource type="Texture2D" uid="uid://bhwk8yui7tk5d" path="res://Assets/Spritesheet/mice.png" id="2_n0stf"]
+[ext_resource type="Texture2D" uid="uid://k0vq75bvg4ad" path="res://Assets/Entities/mice.png" id="2_d50us"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_t01vh"]
-atlas = ExtResource("2_n0stf")
+[sub_resource type="AtlasTexture" id="AtlasTexture_70gvx"]
+atlas = ExtResource("2_d50us")
 region = Rect2(0, 0, 32, 14)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ljciw"]
-atlas = ExtResource("2_n0stf")
+[sub_resource type="AtlasTexture" id="AtlasTexture_bdw6o"]
+atlas = ExtResource("2_d50us")
 region = Rect2(32, 0, 32, 14)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_pwqlc"]
-atlas = ExtResource("2_n0stf")
+[sub_resource type="AtlasTexture" id="AtlasTexture_ubbh6"]
+atlas = ExtResource("2_d50us")
 region = Rect2(64, 0, 32, 14)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_l2jx0"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_t01vh")
+"texture": SubResource("AtlasTexture_70gvx")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ljciw")
+"texture": SubResource("AtlasTexture_bdw6o")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_pwqlc")
+"texture": SubResource("AtlasTexture_ubbh6")
 }],
 "loop": true,
 "name": &"default",
