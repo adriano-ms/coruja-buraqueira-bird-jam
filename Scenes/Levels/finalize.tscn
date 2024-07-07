@@ -1,0 +1,41 @@
+[gd_scene load_steps=4 format=3 uid="uid://d25bvgl033hin"]
+
+[ext_resource type="Theme" uid="uid://bty8qdyqbtnf" path="res://Assets/Themes/new_theme.tres" id="1_nlgl1"]
+[ext_resource type="Script" path="res://Scripts/Finalize.gd" id="2_f7xdp"]
+[ext_resource type="Texture2D" uid="uid://cedt8kthqigkh" path="res://Assets/Spritesheet/1720363970068.png" id="4_yi5lb"]
+
+[node name="Finalize" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme = ExtResource("1_nlgl1")
+script = ExtResource("2_f7xdp")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 45.0
+offset_top = -41.0
+offset_right = 293.0
+offset_bottom = 41.0
+grow_vertical = 2
+
+[node name="StartButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Continue..."
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(576, 324)
+scale = Vector2(0.631579, 0.632813)
+texture = ExtResource("4_yi5lb")
+
+[connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]

@@ -1,7 +1,6 @@
-[gd_scene load_steps=27 format=3 uid="uid://cfgo0cetkxpa0"]
+[gd_scene load_steps=26 format=3 uid="uid://cfgo0cetkxpa0"]
 
 [ext_resource type="PackedScene" uid="uid://cyti38f0lagf2" path="res://Scenes/Prefabs/LevelFinishDoor.tscn" id="1_oqkjg"]
-[ext_resource type="PackedScene" uid="uid://bjb3dx2x4bocm" path="res://Scenes/Levels/Level_02.tscn" id="2_0ac5u"]
 [ext_resource type="PackedScene" uid="uid://w7m6tehvvy3g" path="res://Scenes/Prefabs/player.tscn" id="2_pay8t"]
 [ext_resource type="Script" path="res://Scripts/GameManager.gd" id="4_vgfkr"]
 [ext_resource type="Texture2D" uid="uid://jaegp53ccc7w" path="res://Assets/Spritesheet/platformPack_tilesheet.png" id="5_wqbaa"]
@@ -1426,9 +1425,9 @@ sources/5 = SubResource("TileSetAtlasSource_b5m40")
 [node name="LevelFinishDoor" parent="." instance=ExtResource("1_oqkjg")]
 z_index = 1
 position = Vector2(128, 400)
-next_scene = ExtResource("2_0ac5u")
 
 [node name="Player" parent="." instance=ExtResource("2_pay8t")]
+unique_name_in_owner = true
 z_index = 1
 position = Vector2(264, 342)
 
@@ -1448,6 +1447,7 @@ editor_draw_limits = true
 editor_draw_drag_margin = true
 
 [node name="Level" type="Node2D" parent="."]
+unique_name_in_owner = true
 
 [node name="Ground" type="TileMap" parent="Level" groups=["Ground"]]
 tile_set = SubResource("TileSet_ywwrl")
@@ -1463,7 +1463,7 @@ layer_2/tile_data = PackedInt32Array(524288, 1245185, 0, 589824, 1245185, 0, 589
 
 [node name="SpawnPoint" type="Marker2D" parent="Level"]
 unique_name_in_owner = true
-position = Vector2(174, 383)
+position = Vector2(272, 390)
 
 [node name="TutorialText" type="Node2D" parent="."]
 visible = false

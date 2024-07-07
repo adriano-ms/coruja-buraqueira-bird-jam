@@ -4,6 +4,8 @@ extends Node2D
 
 var time_limit : float = 20.0
 
+var current_level : int = 1
+
 var total_food = 0
 var total_stick = 0
 var total_manure = 0
@@ -22,6 +24,15 @@ func add_stick(amount : int):
 
 func add_manure(amount : int):
 	manure += amount
+	
+func resource_lost():
+	food -= RandomNumberGenerator.new().randi_range(0, 3)
+	stick -= RandomNumberGenerator.new().randi_range(0, 3)
+	manure -= RandomNumberGenerator.new().randi_range(0, 3)
+
+func _next_level():
+	if(current_level < 4):
+		current_level += 1
 
 func _process(delta):
 	if(!pause):
